@@ -19,4 +19,5 @@ gem 'rails', rails
 group :test, :development do
   gem 'sqlite3', '~> 1.3.3'
   gem 'fakeweb'
+  gem 'rspec'
 end
