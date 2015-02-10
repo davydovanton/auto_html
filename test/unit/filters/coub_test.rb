@@ -1,6 +1,6 @@
 require File.expand_path('../../unit_test_helper', __FILE__)
 
-class CoubTest < Test::Unit::TestCase
+class CoubTest < Minitest::Test
   def test_transform
     result = auto_html('http://coub.com/view/24qpb') { coub }
     assert_equal '<iframe src="//coub.com/embed/24qpb?muted=false&autostart=false&originalSize=false&hideTopBar=false&noSiteButtons=false&startWithHD=false" width="640" height="480" frameborder="0" "allowfullscreen"></iframe>', result

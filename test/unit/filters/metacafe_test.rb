@@ -1,6 +1,6 @@
 require File.expand_path('../../unit_test_helper', __FILE__)
 
-class MetaCafeTest < Test::Unit::TestCase
+class MetaCafeTest < Minitest::Test
   def test_transform
     result = auto_html('http://www.metacafe.com/watch/5440707/exclusive_tron_evolution_dev_diary_the_art_design') { metacafe }
     assert_equal '<div style="background:#000000;width:440px;height:272px"><embed flashVars="playerVars=showStats=no|autoPlay=no" src="http://www.metacafe.com/fplayer/5440707/exclusive_tron_evolution_dev_diary_the_art_design.swf" width="440" height="272" wmode="transparent" allowFullScreen="true" allowScriptAccess="always" name="Metacafe_5440707" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"></embed></div>', result

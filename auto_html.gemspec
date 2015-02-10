@@ -18,6 +18,8 @@ Gem::Specification.new do |gem|
   # https://github.com/gettalong/kramdown
   gem.add_dependency('redcarpet', '~> 3.1')
 
+  gem.add_development_dependency('minitest', '~> 5.4')
+
   # ensure the gem is built out of versioned files
   gem.files = Dir['Rakefile', '{bin,lib,man,test,spec}/**/*',
                   'README*', 'LICENSE'] & `git ls-files -z`.split("\0")

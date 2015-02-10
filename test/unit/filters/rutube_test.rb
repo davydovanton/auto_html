@@ -1,6 +1,6 @@
 require File.expand_path('../../unit_test_helper', __FILE__)
 
-class RutubeTest < Test::Unit::TestCase
+class RutubeTest < Minitest::Test
   def test_transform
     result = auto_html('http://rutube.ru/video/9c012ab45b2ec97265c5bbdbf538b204') { rutube }
     assert_equal '<iframe src="//rutube.ru/video/embed/9c012ab45b2ec97265c5bbdbf538b204" width="640" height="480" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>', result

@@ -1,6 +1,6 @@
 require File.expand_path('../../unit_test_helper', __FILE__)
 
-class YouTubeJsApiTest < Test::Unit::TestCase
+class YouTubeJsApiTest < Minitest::Test
   def test_transform
     result = auto_html('http://www.youtube.com/watch?v=BwNrmYRiX_o') { youtube_js_api }
     assert_equal '<object width="390" height="250"><param name="movie" value="//www.youtube.com/v/BwNrmYRiX_o?enablejsapi=1&playerapiid=ytplayer"></param><param name="wmode" value="transparent"></param><param name="allowscriptaccess" value="always"></param><embed src="//www.youtube.com/v/BwNrmYRiX_o?enablejsapi=1&playerapiid=ytplayer" type="application/x-shockwave-flash" wmode="transparent" width="390" height="250" allowscriptaccess="always"></embed></object>', result

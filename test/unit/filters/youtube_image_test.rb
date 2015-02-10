@@ -1,6 +1,6 @@
 require File.expand_path('../../unit_test_helper', __FILE__)
 
-class YouTubeImageTest < Test::Unit::TestCase
+class YouTubeImageTest < Minitest::Test
   def test_transform
     result = auto_html('http://www.youtube.com/watch?v=BwNrmYRiX_o') { youtube_image }
     assert_equal '<a href="https://www.youtube.com/watch?v=BwNrmYRiX_o" target="_blank"><img src="//img.youtube.com/vi/BwNrmYRiX_o/mqdefault.jpg" width="320" height="315" border="0"></a>', result
